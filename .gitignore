@@ -1,0 +1,6 @@
+.qa/
+.asset-staging/
+node_modules/
+.DS_Store
+Thumbs.db
+raizes-historia-afrocentrada.zip
