@@ -1557,6 +1557,27 @@ body.menu-open {
   color:var(--gold)
 }
 
+.footer-bottom .author-credit {
+  flex-direction:column;
+  align-items:flex-start;
+  gap:2px;
+  border-left:1px solid #c7a56e55;
+  padding-left:14px;
+  color:var(--text)
+}
+
+.author-credit small {
+  font:500 8px/1.4 var(--sans);
+  letter-spacing:.18em;
+  color:var(--muted)
+}
+
+.author-credit strong {
+  font:500 19px/1.2 var(--serif);
+  letter-spacing:.01em;
+  color:var(--gold)
+}
+
 
 /* Carregamento curto, sem bloquear a rolagem em caso de erro. */
 .loader {
@@ -1844,7 +1865,13 @@ body.menu-open {
   }
   .footer-bottom {
     flex-direction:row;
-    align-items:center
+    align-items:center;
+    gap:28px
+  }
+  .footer-bottom .author-credit {
+    align-items:center;
+    border-left:0;
+    padding-left:0
   }
   .zumbi-timeline {
     grid-template-columns:repeat(4,minmax(0,1fr))
