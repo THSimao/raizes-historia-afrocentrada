@@ -9,6 +9,8 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2310110e'/%3E%3Cpath d='M16 5v17m0-7L8 9m8 10 9-9M16 22l-8 5m8-5 8 5m-8-5v7' stroke='%23c7a56e' stroke-width='2' fill='none'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/querino-bridge.css">
+    <script src="./js/page-transitions.js" defer></script>
     <script src="./js/script.js" defer>
     </script>
   </head>
@@ -44,6 +46,7 @@
         <a href="#abolicao">Abolição</a>
         <a href="#legado">Legado</a>
         <a href="#zumbi">Zumbi</a>
+        <a class="querino-nav" href="./querino.html" data-page-transition="querino">Querino ↗</a>
       </nav>
       <button class="present-button" type="button">
         <span aria-hidden="true">⛶</span>
@@ -78,6 +81,7 @@
         </a>
         <a href="#zumbi">Zumbi<span>Um nome atravessa os séculos</span>
         </a>
+        <a href="./querino.html" data-page-transition="querino">Projeto Querino ↗<span>Um capítulo especial para ouvir</span></a>
       </nav>
       <p class="menu-foot">HISTÓRIA. RESISTÊNCIA. IDENTIDADE.</p>
     </dialog>
@@ -411,6 +415,20 @@
         </p>
         <p class="legacy-note reveal">Olhar a história a partir do protagonismo africano e afro-brasileiro amplia nossa compreensão do Brasil — e das responsabilidades que temos no presente.</p>
       </section>
+      <aside class="querino-callout" id="projeto-querino" aria-labelledby="querino-callout-title" data-step>
+        <div class="querino-callout-inner reveal">
+          <div>
+            <p class="eyebrow">APROFUNDE / UM CAPÍTULO ESPECIAL</p>
+            <h2 id="querino-callout-title">Uma história<br>para continuar <em>ouvindo.</em></h2>
+          </div>
+          <div class="querino-callout-aside">
+            <span class="querino-mini-wave" aria-hidden="true">▂ ▅ ▃ ▇ ▄ ▂ ▆ ▃ ▅ ▂</span>
+            <h3>Projeto Querino</h3>
+            <p>8 episódios para olhar a História do Brasil por uma perspectiva afrocentrada.</p>
+            <a class="q-link" href="./querino.html" data-page-transition="querino">EXPLORAR O PROJETO <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </aside>
       <section class="interlude zumbi-transition" data-step>
         <p class="eyebrow reveal">ENTRE MILHÕES DE HISTÓRIAS DE RESISTÊNCIA...</p>
         <h2 class="reveal">Um nome atravessou<br>
@@ -595,6 +613,12 @@
             <li>
               <a href="https://www.todamateria.com.br/zumbi-dos-palmares/" target="_blank" rel="noopener noreferrer">Toda Matéria — Zumbi dos Palmares ↗</a>
             </li>
+          </ul>
+          <h3>Projeto Querino — aprofundamento</h3>
+          <ul>
+            <li><a href="https://projetoquerino.com.br/" target="_blank" rel="noopener noreferrer">Projeto Querino — site oficial ↗</a></li>
+            <li><a href="https://projetoquerino.com.br/podcast/" target="_blank" rel="noopener noreferrer">Rádio Novelo — produção e ficha técnica do podcast ↗</a></li>
+            <li><a href="./querino.html#fontes-querino">Páginas oficiais dos oito episódios, transcrições e crédito do retrato de Manuel Querino →</a></li>
           </ul>
           <h3>Imagens e contexto</h3>
           <div id="image-credits">

@@ -22,7 +22,7 @@
 
   function initLoader() {
     const loader = $('.loader');
-    if (reducedMotion.matches) return;
+    if (reducedMotion.matches || location.hash === '#projeto-querino') return;
     document.body.classList.add('hero-pending');
     loader.hidden = false;
     const start = performance.now();

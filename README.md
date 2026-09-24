@@ -26,7 +26,7 @@ Abra `http://127.0.0.1:4173`. Encerre o servidor com `Ctrl+C`. Ele é apenas uma
 
 ## Publicar no GitHub Pages
 
-1. Crie um repositório e envie `index.html`, `css`, `js`, `assets` e este README, preservando a estrutura.
+1. Crie um repositório e envie `index.html`, `querino.html`, `css`, `js`, `assets` e este README, preservando a estrutura.
 2. No repositório, abra **Settings → Pages**.
 3. Em **Build and deployment**, escolha **Deploy from a branch**.
 4. Selecione sua branch principal e a pasta **/ (root)**. Salve.
@@ -39,17 +39,23 @@ Não é necessário configurar bundler, Node no servidor ou domínio próprio. O
 ```text
 .
 ├── index.html
+├── querino.html         # Capítulo especial Projeto Querino
 ├── css/
-│   └── style.css
+│   ├── style.css
+│   ├── querino-bridge.css
+│   └── querino.css
 ├── js/
-│   └── script.js
+│   ├── script.js
+│   ├── page-transitions.js
+│   └── querino.js
 ├── assets/
 │   ├── fonts/           # Fontes locais e licenças OFL
 │   ├── images/          # WebP, versões pequenas e créditos
 │   └── icons/           # Marca do projeto
 ├── tools/
 │   ├── serve.cjs        # Prévia HTTP opcional
-│   └── qa.cjs           # Verificação opcional com Playwright
+│   ├── qa.cjs           # Verificação opcional com Playwright
+│   └── qa-querino.cjs   # Responsividade, carrossel, toque e retorno
 ├── .gitignore
 └── README.md
 ```
@@ -66,6 +72,16 @@ Não é necessário configurar bundler, Node no servidor ou domínio próprio. O
 - Fontes e créditos ficam disponíveis ao final da página.
 
 ## Responsividade
+
+### Capítulo especial Projeto Querino
+
+A chamada após Legado abre `querino.html`; quem continua a leitura segue normalmente para Zumbi. Links no menu também abrem o capítulo, e o retorno leva à chamada original. A transição dura 650 ms no celular e 1050 ms no desktop; a preferência por movimento reduzido mantém navegação direta. View Transitions entre documentos é uma melhoria opcional do navegador, com efeito CSS como alternativa.
+
+O carrossel tem oito artigos estáticos em HTML, rolagem horizontal nativa e CSS Scroll Snap. Aceita toque, botões, setas esquerda/direita e Home/End enquanto focado. Tab percorre os links e centraliza o cartão correspondente. O indicador mostra a posição de leitura, não reprodução de áudio. Os links abrem o episódio no site oficial, que oferece áudio e transcrição. Nenhum áudio é carregado na apresentação.
+
+Fontes e imagem histórica estão creditadas no rodapé da página e em `assets/images/credits.json`. As composições tipográficas e as frases narrativas são identificadas, sem se passarem por documentos ou falas históricas. Todos os conteúdos e links permanecem disponíveis sem JavaScript; nesse caso, o carrossel continua com rolagem nativa e os controles dinâmicos ficam ocultos.
+
+Com Playwright disponível em `NODE_PATH`, rode `node tools/qa-querino.cjs` após iniciar a prévia. O teste cobre as dez larguras abaixo, foco, navegação, gestos de toque, movimento reduzido, ausência de JS e erros de carregamento. `QA_BASE_URL` permite usar uma hospedagem de teste. Resultados e capturas ficam em `.qa/`, fora do Git.
 
 A base do CSS foi escrita para telas pequenas, com ampliação das composições em breakpoints de conteúdo. Foram contempladas as larguras 320, 360, 375, 390, 412, 430, 768, 1024, 1366 e 1920 px.
 
